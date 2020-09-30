@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Righteous&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
@@ -16,23 +17,23 @@
   </head>
 
   <body>
-    {% if messages %}
-      {% for message in messages %}
-        {{ message }}
-      {% endfor %}
-    {% endif %}
 
-    <nav class="navbar navbar-inverse bg-primary navbar-dark">
+    <div class="container">
+
+    <nav class="navbar navbar-inverse bg-primary navbar-dark" style="margin-bottom: 50px">
       <ul class="navbar-nav">
         {% if user.is_authenticated %}
-          <h2>Hello <b>{{ user }}</b></h2>
+          <h5><a href="{% url 'home' %}" style="color:white;text-decoration:none;"><b>Home</b></a> &nbsp;&nbsp;Hello <b>{{ user|title }}</b></h5>
         {% else %}
         <ul class="nav navbar-right">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'signup' %}">Register</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'login' %}">Log In</a>
+            <a class="nav-link" href="{% url 'signup' %}"><b>Register</b></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'login' %}"><b>Log In</b></a>
           </li>
         </ul>
         {% endif %}
@@ -42,6 +43,7 @@
       {% endif %}
     </nav>
 
+  </div>
 
     {% block content %}
     {% endblock %}

@@ -3,10 +3,14 @@
 
 {% block content %}
 <div class="container">
-  <form method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" value="Sign In">
-  </form>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Log In</button>
+      </form>
+    </div>
+  </div>
 </div>
 {%endblock %}

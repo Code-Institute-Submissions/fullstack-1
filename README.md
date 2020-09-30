@@ -1,41 +1,55 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# MEDIA BUNDLE
 
-Welcome santi-rodri,
+The Media Bundle is a web app that let people subscribe for one of four different media bundles.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+## UX
 
-## Gitpod Reminders
+This web app has been designed with a **mobile-first** approach in mind, as most people nowadays access the Internet by using their smart phones.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Special attention has been paid to make the app **responsive** to different screen sizes so the content can be viewed in a clear and well structured way.
 
-`python3 -m http.server`
+## Features
 
-A blue button should appear to click: *Make Public*,
+The web app has been divided into 2 different areas:
 
-Another blue button should appear to click: *Open Browser*.
+### Upper navigation bar:
++ Home link
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
++ Register, for new customers
 
-A blue button should appear to click: *Make Public*,
++ Log In, for existing customers
 
-Another blue button should appear to click: *Open Browser*.
+### Main Panel:
++ Option 1: Just TV
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
++ Option 2: TV - Broadband
 
-## Updates Since The Instructional Video
++ Option 3: TV - Broadband - Movies
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
++ Option 4: TV - Broadband - Movies - Sports - Netflix
+  
+## Technologies used
+ 
+ - **HTML5** : Page structure
+ 
+ - **CSS3** : Styling
+ 
+ - **Bootstrap** : Responsiveness and form styling
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
+ - **Python**, **Django** framework and **Jinja2** : Backend operations
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ - **Postgres** : Relational database system
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+ - **Stripe** : Credit Card Payment API
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing
 
---------
+- The website has been tested for **reponsiveness** for all different screen sizes, using the Google Chrome built-in Inspector tool.
 
-Happy coding!
+- Tests have been carried out for **card payment implementation**.
+
+
+## Deployment
+
+The entire project has been uploaded to **Github**, and then, making use of the **GitPod** interface, it was deployed to **Heroku**, making sure that all the secret keys are securely stored as config variables on Heroku.

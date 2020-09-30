@@ -2,4 +2,63 @@
 
 {% block content %}
 
+<div class="container">
+
+<div class="row">
+  <div class="col" style="margin-bottom: 60px">
+    <div class="card border-dark text-center" style="width: 100%">
+      <h1><span style="font-family: Orbitron"><b>MEDIA BUNDLE</b><span></h1>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+
+  <div class="col-12 col-md-6" style="margin-bottom: 60px">
+    <div class="card border-dark text-center" style="width: 100%">
+      <div class="card-header"><b>BASIC</b></div>
+      <div class="card-body">
+        <h5 class="card-title">Basic Bundle</h5>
+        <p class="card-text">TV (30 channels)</p>
+        <a href="{% url 'checkout'%}?plan=basic" class="btn btn-success">Get Basic</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6" style="margin-bottom: 60px">
+    <div class="card border-dark text-center" style="width: 100%">
+      <div class="card-header"><b>REGULAR</b></div>
+      <div class="card-body">
+        <h5 class="card-title">Regular Bundle</h5>
+        <p class="card-text">TV + Broadband</p>
+        <a href="{% url 'checkout'%}?plan=regular" class="btn btn-success">Get Regular</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6" style="margin-bottom: 60px">
+    <div class="card border-dark text-center" style="width: 100%">
+      <div class="card-header"><b>PREMIUM</b></div>
+      <div class="card-body">
+        <h5 class="card-title">Premium Bundle</h5>
+        <p class="card-text">TV + Broadband + Movies</p>
+        <a href="{% url 'checkout'%}?plan=premium" class="btn btn-success">Get Premium</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6" style="margin-bottom: 60px">
+    <div class="card border-dark text-center" style="width: 100%">
+      <div class="card-header"><b>KING</b></div>
+      <div class="card-body">
+        <h5 class="card-title">King Bundle</h5>
+        <p class="card-text">TV + Broadband + Movies + Sports + Netflix</p>
+        <a href="{% url 'checkout'%}?plan=king" class="btn btn-success">Get King</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
 {% endblock %}
